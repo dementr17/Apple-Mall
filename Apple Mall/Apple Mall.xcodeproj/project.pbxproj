@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5FFB2F4627858F2F00B2D3C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB2F4527858F2F00B2D3C3 /* AppDelegate.swift */; };
 		5FFB2F4827858F2F00B2D3C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB2F4727858F2F00B2D3C3 /* SceneDelegate.swift */; };
-		5FFB2F4A27858F2F00B2D3C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB2F4927858F2F00B2D3C3 /* ViewController.swift */; };
 		5FFB2F4D27858F2F00B2D3C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FFB2F4B27858F2F00B2D3C3 /* Main.storyboard */; };
 		5FFB2F4F27858F3100B2D3C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FFB2F4E27858F3100B2D3C3 /* Assets.xcassets */; };
 		5FFB2F5227858F3100B2D3C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FFB2F5027858F3100B2D3C3 /* LaunchScreen.storyboard */; };
@@ -18,13 +17,13 @@
 		5FFB2F622785A2DB00B2D3C3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB2F612785A2DB00B2D3C3 /* TableViewController.swift */; };
 		5FFB2F642785AA2C00B2D3C3 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB2F632785AA2C00B2D3C3 /* RegistrationViewController.swift */; };
 		5FFB2F662785AA5200B2D3C3 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB2F652785AA5200B2D3C3 /* BuyViewController.swift */; };
+		5FFB2F682786314500B2D3C3 /* Iphone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB2F672786314500B2D3C3 /* Iphone.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5FFB2F4227858F2F00B2D3C3 /* Apple Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Mall.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FFB2F4527858F2F00B2D3C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FFB2F4727858F2F00B2D3C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5FFB2F4927858F2F00B2D3C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5FFB2F4C27858F2F00B2D3C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FFB2F4E27858F3100B2D3C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FFB2F5127858F3100B2D3C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +33,7 @@
 		5FFB2F612785A2DB00B2D3C3 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		5FFB2F632785AA2C00B2D3C3 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		5FFB2F652785AA5200B2D3C3 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		5FFB2F672786314500B2D3C3 /* Iphone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iphone.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,6 @@
 		5FFB2F5A27859D2C00B2D3C3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5FFB2F4927858F2F00B2D3C3 /* ViewController.swift */,
 				5FFB2F5D2785A25F00B2D3C3 /* InfoViewController.swift */,
 				5FFB2F5F2785A27300B2D3C3 /* FilterViewController.swift */,
 				5FFB2F612785A2DB00B2D3C3 /* TableViewController.swift */,
@@ -110,6 +109,7 @@
 		5FFB2F5C27859F1900B2D3C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5FFB2F672786314500B2D3C3 /* Iphone.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,13 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FFB2F4A27858F2F00B2D3C3 /* ViewController.swift in Sources */,
 				5FFB2F662785AA5200B2D3C3 /* BuyViewController.swift in Sources */,
 				5FFB2F622785A2DB00B2D3C3 /* TableViewController.swift in Sources */,
 				5FFB2F4627858F2F00B2D3C3 /* AppDelegate.swift in Sources */,
 				5FFB2F5E2785A25F00B2D3C3 /* InfoViewController.swift in Sources */,
 				5FFB2F642785AA2C00B2D3C3 /* RegistrationViewController.swift in Sources */,
 				5FFB2F4827858F2F00B2D3C3 /* SceneDelegate.swift in Sources */,
+				5FFB2F682786314500B2D3C3 /* Iphone.swift in Sources */,
 				5FFB2F602785A27300B2D3C3 /* FilterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
