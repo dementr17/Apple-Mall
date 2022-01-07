@@ -22,7 +22,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Et-Tx-3KY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-429" y="161"/>
+            <point key="canvasLocation" x="-394" y="161"/>
         </scene>
         <!--Buy View Controller-->
         <scene sceneID="PdA-hK-fZn">
@@ -59,6 +59,9 @@
                                         <buttonConfiguration key="configuration" style="gray" title="Clear">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clearCart:" destination="BdP-LD-qYv" eventType="touchUpInside" id="XJA-Fh-jhe"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsh-AE-iAC">
                                         <rect key="frame" x="160" y="0.0" width="120" height="31"/>
@@ -68,6 +71,7 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="goPayment:" destination="BdP-LD-qYv" eventType="touchUpInside" id="6Aq-g9-o6j"/>
                                             <segue destination="QqB-8M-AWv" kind="show" id="kTn-7m-DJo"/>
                                         </connections>
                                     </button>
@@ -92,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAK-Xn-4QZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="422" y="-623"/>
+            <point key="canvasLocation" x="1232" y="-563"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="Ekm-6u-5D2">
@@ -142,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="few-cq-bP5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1314" y="-623"/>
+            <point key="canvasLocation" x="2049" y="-563"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="mbw-Ts-gfa">
@@ -214,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJi-J0-Ybj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1316" y="161"/>
+            <point key="canvasLocation" x="1232" y="161"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="aW9-nA-DWP">

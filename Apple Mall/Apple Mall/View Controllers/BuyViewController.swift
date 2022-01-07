@@ -29,7 +29,13 @@ class BuyViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func clearCart(_ sender: Any) {
+        buyIphones = []
+        tableIPhone.reloadData()
+    }
+    @IBAction func goPayment(_ sender: Any) {
+    }
+    
 }
 
 extension BuyViewController: UITableViewDelegate, UITableViewDataSource {
