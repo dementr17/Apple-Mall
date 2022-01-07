@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TableViewControllerDelegate {
+    func update(iphone: [IPhone])
+}
+
 class TableViewController: UITableViewController {
     
     var iPhones = IPhone.getIPhones()
@@ -47,15 +51,22 @@ class TableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow {
-                guard let infoVC = segue.destination as? InfoViewController else { return }
+            guard let infoVC = segue.destination as? InfoViewController else { return }
+            infoVC.delegate = self
             infoVC.iPhone = iPhones[indexPath.row]
-            infoVC.iPhones = iPhonesBuy
-    } else if let buyVC = segue.destination as? BuyViewController {
+            infoVC.iPhoness = iPhonesBuy
+        } else if let buyVC = segue.destination as? BuyViewController {
             buyVC.buyIphones = iPhonesBuy
         }
 
 }
     
     @IBAction func goCart(_ sender: Any) {
+    }
+}
+
+extension TableViewController: TableViewControllerDelegate {
+    func update(iphone: [IPhone]) {
+        iPhonesBuy = iphone
     }
 }

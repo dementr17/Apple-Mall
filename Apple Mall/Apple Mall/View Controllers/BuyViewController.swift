@@ -11,7 +11,7 @@ class BuyViewController: UIViewController {
     
     @IBOutlet weak var tableIPhone: UITableView!
     
-    var buyIphones = [IPhone(model: "IPhone", color: "black", memorySize: 32, displaySize: 6.1, price: 0)]
+    var buyIphones: [IPhone] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +43,9 @@ extension BuyViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellBuy", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
                 let iPhone = buyIphones[indexPath.row]
-                cell.backgroundColor = .red
         
                 var content = cell.defaultContentConfiguration()
         

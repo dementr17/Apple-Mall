@@ -39,7 +39,7 @@
                                     <constraint firstAttribute="height" constant="240" id="XBa-cC-uvd"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellBuy" id="aBe-CM-qUG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="aBe-CM-qUG">
                                         <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aBe-CM-qUG" id="rYH-xu-ufj">
@@ -87,7 +87,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="uxV-3V-brF"/>
                     <connections>
-                        <outlet property="tableIPhone" destination="JgG-0T-B2c" id="VPZ-0p-Vzk"/>
+                        <outlet property="tableIPhone" destination="JgG-0T-B2c" id="d8H-JF-DNX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAK-Xn-4QZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

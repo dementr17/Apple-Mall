@@ -15,17 +15,20 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     
-    var iPhone: IPhone = IPhone(model: "IPhone", color: "black", memorySize: 32, displaySize: 6.1, price: 0)
-    var iPhones: [IPhone] = []
+    var delegate: TableViewControllerDelegate?
+    var iPhone: IPhone!
+    var iPhoness: [IPhone] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         image.image = UIImage(named: iPhone.model)
         nameLabel.text = iPhone.model
         infoLabel.text = "Display Size: \(iPhone.displaySize). Memory Size: \(iPhone.memorySize). Price \(iPhone.price). Color \(iPhone.color)."
     }
     
     @IBAction func addCart(_ sender: Any) {
-        iPhones.append(iPhone)
+        iPhoness.append(iPhone)
+        delegate?.update(iphone: iPhoness)
     }
 }
