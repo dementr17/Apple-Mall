@@ -8,17 +8,13 @@
 import UIKit
 
 class TableViewController: UITableViewController {
+    
 
-    var iPhones: [IPhone] = []
+    var iPhones = IPhone.getIPhones()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.rowHeight = 80
     }
 
     // MARK: - Table view data source
@@ -33,14 +29,16 @@ class TableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
         let iPhone = iPhones[indexPath.row]
-
-            var content = cell.defaultContentConfiguration()
-
-            content.text = iPhone.model
-            cell.contentConfiguration = content
+        
+        var content = cell.defaultContentConfiguration()
+        
+        content.text = iPhone.model
+        content.image = UIImage(named: iPhone.model)
+        content.imageProperties.cornerRadius = tableView.rowHeight / 2
+        cell.contentConfiguration = content
         
         return cell
     }

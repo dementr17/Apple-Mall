@@ -47,7 +47,6 @@ extension IPhone {
             IPhone(model: "iPhone 11 Pro Max", color: "black", memorySize: 64, displaySize: 6.5, price: 0),
             IPhone(model: "iPhone 11 Pro Max", color: "black", memorySize: 256, displaySize: 6.5, price: 0),
             IPhone(model: "iPhone 11 Pro Max", color: "black", memorySize: 512, displaySize: 6.5, price: 0)
-            
         ]
     }
 }
