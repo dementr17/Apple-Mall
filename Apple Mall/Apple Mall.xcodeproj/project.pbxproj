@@ -88,11 +88,11 @@
 		5FFB2F5A27859D2C00B2D3C3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5FFB2F5D2785A25F00B2D3C3 /* InfoViewController.swift */,
-				5FFB2F5F2785A27300B2D3C3 /* FilterViewController.swift */,
 				5FFB2F612785A2DB00B2D3C3 /* TableViewController.swift */,
-				5FFB2F632785AA2C00B2D3C3 /* RegistrationViewController.swift */,
+				5FFB2F5D2785A25F00B2D3C3 /* InfoViewController.swift */,
 				5FFB2F652785AA5200B2D3C3 /* BuyViewController.swift */,
+				5FFB2F632785AA2C00B2D3C3 /* RegistrationViewController.swift */,
+				5FFB2F5F2785A27300B2D3C3 /* FilterViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

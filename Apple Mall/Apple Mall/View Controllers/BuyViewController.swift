@@ -8,14 +8,18 @@
 import UIKit
 
 class BuyViewController: UIViewController {
-
+    
+    @IBOutlet weak var tableIPhone: UITableView!
+    
+    var buyIphones = [IPhone(model: "IPhone", color: "black", memorySize: 32, displaySize: 6.1, price: 0)]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableIPhone.delegate = self
+        tableIPhone.dataSource = self
+        tableIPhone.rowHeight = 80
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -25,5 +29,34 @@ class BuyViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
+
+extension BuyViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        buyIphones.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellBuy", for: indexPath)
+        
+                let iPhone = buyIphones[indexPath.row]
+                cell.backgroundColor = .red
+        
+                var content = cell.defaultContentConfiguration()
+        
+                content.text = iPhone.model
+                content.image = UIImage(named: iPhone.model)
+                content.imageProperties.cornerRadius = tableView.rowHeight / 10
+    
+                cell.contentConfiguration = content
+        
+                return cell
+    }
 
 }

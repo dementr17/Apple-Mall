@@ -9,8 +9,8 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-
     var iPhones = IPhone.getIPhones()
+    var iPhonesBuy: [IPhone] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,47 +37,11 @@ class TableViewController: UITableViewController {
         
         content.text = iPhone.model
         content.image = UIImage(named: iPhone.model)
-        content.imageProperties.cornerRadius = tableView.rowHeight / 2
+        content.imageProperties.cornerRadius = tableView.rowHeight / 10
         cell.contentConfiguration = content
         
         return cell
     }
-
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     // MARK: - Navigation
 
@@ -85,7 +49,13 @@ class TableViewController: UITableViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
                 guard let infoVC = segue.destination as? InfoViewController else { return }
             infoVC.iPhone = iPhones[indexPath.row]
-    }
+            infoVC.iPhones = iPhonesBuy
+    } else if let buyVC = segue.destination as? BuyViewController {
+            buyVC.buyIphones = iPhonesBuy
+        }
 
 }
+    
+    @IBAction func goCart(_ sender: Any) {
+    }
 }
