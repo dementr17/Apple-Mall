@@ -17,7 +17,7 @@ class InfoViewController: UIViewController {
     
     var delegate: TableViewControllerDelegate?
     var iPhone: IPhone!
-    var iPhoness: [IPhone] = []
+    var iPhonesInside: [IPhone] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class InfoViewController: UIViewController {
     }
     
     @IBAction func addCart(_ sender: Any) {
-        iPhoness.append(iPhone)
-        delegate?.update(iphone: iPhoness)
+        iPhonesInside.append(iPhone)
+        delegate?.update(iphone: iPhonesInside)
     }
 }

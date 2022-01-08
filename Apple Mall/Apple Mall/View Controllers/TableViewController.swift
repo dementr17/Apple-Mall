@@ -14,7 +14,9 @@ protocol TableViewControllerDelegate {
 class TableViewController: UITableViewController {
     
     var iPhones = IPhone.getIPhones()
-    var iPhonesBuy: [IPhone] = []
+    var iPhonesInside: [IPhone] = []
+    var iPhonesOuside: [IPhone] = []
+    var iPhonesAll: [IPhone] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing:  BuyTableCell.self)) as! BuyTableCell
             cell.configure(with: iPhones[indexPath.row])
+        cell.delegate = self
         
         return cell
     }
@@ -52,12 +55,14 @@ class TableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let buyVC = segue.destination as? BuyViewController {
-            buyVC.buyIphones = iPhonesBuy
+            iPhonesAll = iPhonesInside + iPhonesOuside
+            buyVC.iPhonesAll = iPhonesAll
         }
 
 }
     
     @IBAction func goCart(_ sender: Any) {
+        
     }
 }
 
@@ -76,11 +81,11 @@ extension TableViewController: TableViewControllerDelegate {
 //        }), menu: nil)
 //    }
     
-    /// Перейти на контроллер фильтров
+    /// Перейти на контроллер InfoVC
     func routeToInfo(iPhon: IPhone) {
         // Взять Main.storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        // Взять из него viewController с indetifier == "FiltersViewController"
+        // Взять из него viewController с indetifier == "InfoViewController"
         let infoViewController =  storyboard.instantiateViewController(withIdentifier: "InfoViewController") as! InfoViewController
         infoViewController.delegate = self
         infoViewController.iPhone = iPhon
@@ -89,6 +94,6 @@ extension TableViewController: TableViewControllerDelegate {
     }
     
     func update(iphone: [IPhone]) {
-        iPhonesBuy = iphone
+        iPhonesInside = iphone
     }
 }

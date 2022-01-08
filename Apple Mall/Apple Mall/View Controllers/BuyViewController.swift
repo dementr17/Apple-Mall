@@ -11,7 +11,7 @@ class BuyViewController: UIViewController {
     
     @IBOutlet weak var tableIPhone: UITableView!
     
-    var buyIphones: [IPhone] = []
+    var iPhonesAll: [IPhone]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class BuyViewController: UIViewController {
     }
     */
     @IBAction func clearCart(_ sender: Any) {
-        buyIphones = []
+        iPhonesAll = []
         tableIPhone.reloadData()
     }
     @IBAction func goPayment(_ sender: Any) {
@@ -45,13 +45,13 @@ extension BuyViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        buyIphones.count
+        iPhonesAll.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-                let iPhone = buyIphones[indexPath.row]
+                let iPhone = iPhonesAll[indexPath.row]
         
                 var content = cell.defaultContentConfiguration()
         
