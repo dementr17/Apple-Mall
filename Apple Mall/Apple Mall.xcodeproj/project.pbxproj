@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FCE8DC327895D7E00208C77 /* BuyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE8DC227895D7E00208C77 /* BuyTableCell.swift */; };
+		5FCE8DC727895E3400208C77 /* BuyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE8DC627895E3400208C77 /* BuyTableCell.xib */; };
 		5FFB2F4627858F2F00B2D3C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB2F4527858F2F00B2D3C3 /* AppDelegate.swift */; };
 		5FFB2F4827858F2F00B2D3C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB2F4727858F2F00B2D3C3 /* SceneDelegate.swift */; };
 		5FFB2F4D27858F2F00B2D3C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FFB2F4B27858F2F00B2D3C3 /* Main.storyboard */; };
@@ -18,9 +20,12 @@
 		5FFB2F642785AA2C00B2D3C3 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB2F632785AA2C00B2D3C3 /* RegistrationViewController.swift */; };
 		5FFB2F662785AA5200B2D3C3 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB2F652785AA5200B2D3C3 /* BuyViewController.swift */; };
 		5FFB2F682786314500B2D3C3 /* Iphone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB2F672786314500B2D3C3 /* Iphone.swift */; };
+		5FFB2F702788C10100B2D3C3 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB2F6F2788C10100B2D3C3 /* CheckBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5FCE8DC227895D7E00208C77 /* BuyTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTableCell.swift; sourceTree = "<group>"; };
+		5FCE8DC627895E3400208C77 /* BuyTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyTableCell.xib; sourceTree = "<group>"; };
 		5FFB2F4227858F2F00B2D3C3 /* Apple Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Mall.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FFB2F4527858F2F00B2D3C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FFB2F4727858F2F00B2D3C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +39,7 @@
 		5FFB2F632785AA2C00B2D3C3 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		5FFB2F652785AA5200B2D3C3 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		5FFB2F672786314500B2D3C3 /* Iphone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iphone.swift; sourceTree = "<group>"; };
+		5FFB2F6F2788C10100B2D3C3 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,9 +53,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5FCE8DC127895D1D00208C77 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5FCE8DC227895D7E00208C77 /* BuyTableCell.swift */,
+				5FCE8DC627895E3400208C77 /* BuyTableCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		5FFB2F3927858F2F00B2D3C3 = {
 			isa = PBXGroup;
 			children = (
+				5FCE8DC127895D1D00208C77 /* Cell */,
 				5FFB2F4427858F2F00B2D3C3 /* Apple Mall */,
 				5FFB2F4327858F2F00B2D3C3 /* Products */,
 			);
@@ -66,6 +82,7 @@
 		5FFB2F4427858F2F00B2D3C3 /* Apple Mall */ = {
 			isa = PBXGroup;
 			children = (
+				5FFB2F6E2788C0CA00B2D3C3 /* Classes */,
 				5FFB2F5C27859F1900B2D3C3 /* Models */,
 				5FFB2F5B27859EC500B2D3C3 /* Settings */,
 				5FFB2F5A27859D2C00B2D3C3 /* View Controllers */,
@@ -112,6 +129,14 @@
 				5FFB2F672786314500B2D3C3 /* Iphone.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5FFB2F6E2788C0CA00B2D3C3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5FFB2F6F2788C10100B2D3C3 /* CheckBox.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FFB2F5227858F3100B2D3C3 /* LaunchScreen.storyboard in Resources */,
+				5FCE8DC727895E3400208C77 /* BuyTableCell.xib in Resources */,
 				5FFB2F4F27858F3100B2D3C3 /* Assets.xcassets in Resources */,
 				5FFB2F4D27858F2F00B2D3C3 /* Main.storyboard in Resources */,
 			);
@@ -185,8 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FCE8DC327895D7E00208C77 /* BuyTableCell.swift in Sources */,
 				5FFB2F662785AA5200B2D3C3 /* BuyViewController.swift in Sources */,
 				5FFB2F622785A2DB00B2D3C3 /* TableViewController.swift in Sources */,
+				5FFB2F702788C10100B2D3C3 /* CheckBox.swift in Sources */,
 				5FFB2F4627858F2F00B2D3C3 /* AppDelegate.swift in Sources */,
 				5FFB2F5E2785A25F00B2D3C3 /* InfoViewController.swift in Sources */,
 				5FFB2F642785AA2C00B2D3C3 /* RegistrationViewController.swift in Sources */,

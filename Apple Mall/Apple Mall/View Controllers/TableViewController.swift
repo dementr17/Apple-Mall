@@ -18,6 +18,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
         tableView.rowHeight = 80
     }
 
@@ -33,29 +34,24 @@ class TableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        let iPhone = iPhones[indexPath.row]
-        
-        var content = cell.defaultContentConfiguration()
-        
-        content.text = iPhone.model
-        content.image = UIImage(named: iPhone.model)
-        content.imageProperties.cornerRadius = tableView.rowHeight / 10
-        cell.contentConfiguration = content
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing:  BuyTableCell.self)) as! BuyTableCell
+            cell.configure(with: iPhones[indexPath.row])
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //передача данных на другой экран по действию
+        tableView.deselectRow(at: indexPath, animated: true)
+        //если сработала ячейка по данному индексу (метод который анимационно убирает выделение ячейки)
+        let iphone = iPhones[indexPath.row]
+        routeToInfo(iPhon: iphone)
     }
 
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let indexPath = tableView.indexPathForSelectedRow {
-            guard let infoVC = segue.destination as? InfoViewController else { return }
-            infoVC.delegate = self
-            infoVC.iPhone = iPhones[indexPath.row]
-            infoVC.iPhoness = iPhonesBuy
-        } else if let buyVC = segue.destination as? BuyViewController {
+        if let buyVC = segue.destination as? BuyViewController {
             buyVC.buyIphones = iPhonesBuy
         }
 
@@ -66,6 +62,32 @@ class TableViewController: UITableViewController {
 }
 
 extension TableViewController: TableViewControllerDelegate {
+    
+    func setupTableView() {
+        registerXibs()
+    }
+    func registerXibs() {
+        tableView.register(UINib(nibName: String(describing:  BuyTableCell.self), bundle: nil), forCellReuseIdentifier: String(describing:  BuyTableCell.self))
+    }
+
+//    func setupNavigationController() {
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .search, primaryAction: UIAction(handler: { [weak self]_ in
+//            self?.routeToFilters()
+//        }), menu: nil)
+//    }
+    
+    /// Перейти на контроллер фильтров
+    func routeToInfo(iPhon: IPhone) {
+        // Взять Main.storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // Взять из него viewController с indetifier == "FiltersViewController"
+        let infoViewController =  storyboard.instantiateViewController(withIdentifier: "InfoViewController") as! InfoViewController
+        infoViewController.delegate = self
+        infoViewController.iPhone = iPhon
+        // Добавить в стек navigationController-а полученный контроллер
+        navigationController?.pushViewController(infoViewController, animated: true)
+    }
+    
     func update(iphone: [IPhone]) {
         iPhonesBuy = iphone
     }
