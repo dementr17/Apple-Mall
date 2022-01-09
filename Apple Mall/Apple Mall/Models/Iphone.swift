@@ -16,7 +16,7 @@ struct IPhone {
     let price: Int
     
 }
-
+//:-)
 extension IPhone {
     static func getIPhones() -> [IPhone] {
         [
@@ -50,3 +50,4 @@ extension IPhone {
         ]
     }
 }
+//:-)
