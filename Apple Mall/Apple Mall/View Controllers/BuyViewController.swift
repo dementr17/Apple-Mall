@@ -10,7 +10,7 @@ import UIKit
 class BuyViewController: UIViewController {
     
     @IBOutlet weak var tableIPhone: UITableView!
-    
+    //:-)
     var iPhonesAllBVC: [IPhone]!
     var delegate: TableViewControllerDelegate?
     var delegateStorage: Storage?

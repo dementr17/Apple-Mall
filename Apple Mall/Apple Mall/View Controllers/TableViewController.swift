@@ -11,7 +11,7 @@ protocol TableViewControllerDelegate {
     func update(iphone: [IPhone])
     func clear(iphone: [IPhone])
 }
-
+//:-)
 class TableViewController: UITableViewController {
     
     var index = false
@@ -128,3 +128,4 @@ extension TableViewController: TableViewControllerDelegate {
     //        }), menu: nil)
     //    }
 }
+//:-)

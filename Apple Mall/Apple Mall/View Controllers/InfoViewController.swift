@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class InfoViewController: UIViewController {
-    
+    //:-)
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
