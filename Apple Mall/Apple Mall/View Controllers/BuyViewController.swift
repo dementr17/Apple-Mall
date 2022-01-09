@@ -11,10 +11,13 @@ class BuyViewController: UIViewController {
     
     @IBOutlet weak var tableIPhone: UITableView!
     
-    var iPhonesAll: [IPhone]!
+    var iPhonesAllBVC: [IPhone]!
+    var delegate: TableViewControllerDelegate?
+    var delegateStorage: Storage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableIPhone.delegate = self
         tableIPhone.dataSource = self
         tableIPhone.rowHeight = 80
@@ -30,8 +33,9 @@ class BuyViewController: UIViewController {
     }
     */
     @IBAction func clearCart(_ sender: Any) {
-        iPhonesAll = []
+        iPhonesAllBVC = []
         tableIPhone.reloadData()
+        delegate?.clear(iphone: iPhonesAllBVC)
     }
     @IBAction func goPayment(_ sender: Any) {
     }
@@ -45,13 +49,13 @@ extension BuyViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        iPhonesAll.count
+        iPhonesAllBVC.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-                let iPhone = iPhonesAll[indexPath.row]
+                let iPhone = iPhonesAllBVC[indexPath.row]
         
                 var content = cell.defaultContentConfiguration()
         

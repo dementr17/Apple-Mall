@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5FCE8DC327895D7E00208C77 /* BuyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE8DC227895D7E00208C77 /* BuyTableCell.swift */; };
-		5FCE8DC727895E3400208C77 /* BuyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE8DC627895E3400208C77 /* BuyTableCell.xib */; };
+		5FA67332278A05E2003CC989 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA67331278A05E2003CC989 /* Storage.swift */; };
+		5FCE8DC327895D7E00208C77 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE8DC227895D7E00208C77 /* TableCell.swift */; };
+		5FCE8DC727895E3400208C77 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCE8DC627895E3400208C77 /* TableCell.xib */; };
 		5FFB2F4627858F2F00B2D3C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB2F4527858F2F00B2D3C3 /* AppDelegate.swift */; };
 		5FFB2F4827858F2F00B2D3C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB2F4727858F2F00B2D3C3 /* SceneDelegate.swift */; };
 		5FFB2F4D27858F2F00B2D3C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FFB2F4B27858F2F00B2D3C3 /* Main.storyboard */; };
@@ -24,8 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5FCE8DC227895D7E00208C77 /* BuyTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTableCell.swift; sourceTree = "<group>"; };
-		5FCE8DC627895E3400208C77 /* BuyTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyTableCell.xib; sourceTree = "<group>"; };
+		5FA67331278A05E2003CC989 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		5FCE8DC227895D7E00208C77 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		5FCE8DC627895E3400208C77 /* TableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		5FFB2F4227858F2F00B2D3C3 /* Apple Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Mall.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FFB2F4527858F2F00B2D3C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FFB2F4727858F2F00B2D3C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,8 +58,8 @@
 		5FCE8DC127895D1D00208C77 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				5FCE8DC227895D7E00208C77 /* BuyTableCell.swift */,
-				5FCE8DC627895E3400208C77 /* BuyTableCell.xib */,
+				5FCE8DC227895D7E00208C77 /* TableCell.swift */,
+				5FCE8DC627895E3400208C77 /* TableCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				5FFB2F672786314500B2D3C3 /* Iphone.swift */,
+				5FA67331278A05E2003CC989 /* Storage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,7 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FFB2F5227858F3100B2D3C3 /* LaunchScreen.storyboard in Resources */,
-				5FCE8DC727895E3400208C77 /* BuyTableCell.xib in Resources */,
+				5FCE8DC727895E3400208C77 /* TableCell.xib in Resources */,
 				5FFB2F4F27858F3100B2D3C3 /* Assets.xcassets in Resources */,
 				5FFB2F4D27858F2F00B2D3C3 /* Main.storyboard in Resources */,
 			);
@@ -211,7 +214,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FCE8DC327895D7E00208C77 /* BuyTableCell.swift in Sources */,
+				5FCE8DC327895D7E00208C77 /* TableCell.swift in Sources */,
+				5FA67332278A05E2003CC989 /* Storage.swift in Sources */,
 				5FFB2F662785AA5200B2D3C3 /* BuyViewController.swift in Sources */,
 				5FFB2F622785A2DB00B2D3C3 /* TableViewController.swift in Sources */,
 				5FFB2F702788C10100B2D3C3 /* CheckBox.swift in Sources */,
